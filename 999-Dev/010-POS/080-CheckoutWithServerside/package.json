@@ -1,0 +1,19 @@
+{
+  "name": "sync_validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+	"build:es": "babel src --out-dir es --extensions \".ts,.tsx\"",
+	"build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\"",
+    "watch": "webpack --progress --colors --watch",
+    "serve": "node server-dev.js",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "module": "es/index.js",
+  "main": "lib/index.js"
+}

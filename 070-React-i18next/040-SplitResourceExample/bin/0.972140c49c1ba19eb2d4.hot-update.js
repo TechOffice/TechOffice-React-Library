@@ -1,0 +1,1 @@
+webpackHotUpdate(0,{14:function(module){eval('module.exports = {"age":{"label":"Age"},"home":{"label":"Home"},"name":{"label":"Name"}};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxNC5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///14\n')}});

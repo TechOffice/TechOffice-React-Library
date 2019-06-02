@@ -1,0 +1,43 @@
+const path = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+	entry: './src/App.tsx',
+	output: {
+		path: path.resolve(__dirname, 'bin'),
+		filename: 'app.bundle.js',
+		publicPath: '/bin'
+	},
+	mode: 'development',
+	devtool: "inline-source-map",
+	devServer: {
+		contentBase: "./",
+		hot: true,
+		proxy: {
+			'/api': {
+				target: 'http://localhost:7003',
+				pathRewrite: {'^/api' : ''}		
+			}
+		}
+	},
+	module: {
+		rules: [
+			{
+				test: /\.tsx$/,
+				use:{
+					loader: 'babel-loader'
+				},
+				exclude: [
+					/node_modules/
+				]
+			}
+		]
+	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin()
+	],
+	resolve: {
+		extensions: ['.jsx', '.js', '.tsx', 'ts'], 
+		modules: [ path.resolve(__dirname, 'src'), 'node_modules' ] 
+	}
+}; 
